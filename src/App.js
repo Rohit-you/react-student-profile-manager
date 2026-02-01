@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import StudentForm from "./components/StudentForm";
+import StudentList from "./components/StudentList";
+import "./App.css";
+
 
 function App() {
+  const [students, setStudents] = useState([]);
+
+  const addStudent = (student) => {
+    setStudents([...students, student]);
+  };
+
+  const deleteStudent = (index) => {
+    const newList = students.filter((_, i) => i !== index);
+    setStudents(newList);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+   <div className="container">
+      <h2>Student Profile Manager</h2>
+      <StudentForm addStudent={addStudent} />
+      <StudentList students={students} deleteStudent={deleteStudent} />
     </div>
   );
 }
