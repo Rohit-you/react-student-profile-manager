@@ -49,5 +49,11 @@ In this project, I made sure to use:
 - **Props** to pass data between the parents and children components.
 - **Standard Form Handling** with simple validation.
 
+## 📝 Latest Updates
+
+- Enhanced UI with better component structure
+- Improved form validation and error handling
+- Added responsive design for mobile devices
+
 ---
 *Built for the Credora Internship - React Starter Project.*
