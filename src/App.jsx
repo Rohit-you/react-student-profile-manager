@@ -19,8 +19,8 @@ function App() {
   return (
     <div className="container">
       <header className="header">
-        <h1>Student Manager</h1>
-        <p>A simple way to manage student profiles for the Credora Internship</p>
+        <h1>Student Manager Portal</h1>
+        <p>A simple way to manage student profiles for the Credora Internship - v2.0</p>
       </header>
 
       <main>
