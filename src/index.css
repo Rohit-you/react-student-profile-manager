@@ -1,75 +1,132 @@
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, #1e3a8a, transparent 40%),
+    radial-gradient(circle at bottom right, #0ea5e9, transparent 40%),
+    linear-gradient(135deg, #020617, #020617);
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  color: #e5e7eb;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-body {
-  background-color: #f4f6f8;
-  font-family: Arial, Helvetica, sans-serif;
-}
 
 .container {
-  max-width: 600px;
-  margin: 40px auto;
-  background: white;
-  padding: 25px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  max-width: 420px;
+  margin: 60px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-radius: 22px;
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow:
+    0 25px 60px rgba(0,0,0,0.6),
+    inset 0 0 30px rgba(255,255,255,0.05);
 }
+
 
 h2, h3 {
   text-align: center;
-  color: #333;
+  margin-bottom: 24px;
+  font-weight: 600;
+  background: linear-gradient(90deg, #38bdf8, #22c55e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
+
 
 form input {
   width: 100%;
-  padding: 8px;
-  margin: 6px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 14px;
+  margin-bottom: 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.08);
+  color: #f9fafb;
+  font-size: 14px;
+  transition: 0.3s;
 }
+
+form input::placeholder {
+  color: #9ca3af;
+}
+
+form input:focus {
+  outline: none;
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 4px rgba(56,189,248,0.25);
+}
+
 
 form button {
   width: 100%;
-  padding: 10px;
-  background-color: #2563eb;
-  color: white;
+  padding: 14px;
+  margin-top: 10px;
+  border-radius: 16px;
   border: none;
-  border-radius: 4px;
+  background: linear-gradient(135deg, #38bdf8, #22c55e);
+  color: #020617;
+  font-weight: 700;
+  font-size: 15px;
   cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: 0.35s;
 }
 
 form button:hover {
-  background-color: #1e40af;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow:
+    0 15px 40px rgba(56,189,248,0.5),
+    0 0 30px rgba(34,197,94,0.4);
 }
+
 
 .student-card {
-  border: 1px solid #ddd;
-  padding: 15px;
-  margin-top: 15px;
-  border-radius: 6px;
-  background-color: #fafafa;
+  margin-top: 18px;
+  padding: 18px;
+  border-radius: 18px;
+  background: linear-gradient(
+    145deg,
+    rgba(255,255,255,0.12),
+    rgba(255,255,255,0.03)
+  );
+  border: 1px solid rgba(255,255,255,0.18);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+  transition: 0.3s;
 }
 
+.student-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.7);
+}
+
+.student-card h4 {
+  margin: 0 0 6px;
+  font-size: 16px;
+  color: #f8fafc;
+}
+
+.student-card p {
+  margin: 0;
+  font-size: 13px;
+  color: #cbd5f5;
+}
+
+
 .student-card button {
-  background-color: #dc2626;
-  color: white;
+  margin-top: 12px;
+  padding: 7px 14px;
+  border-radius: 12px;
   border: none;
-  padding: 6px 10px;
-  border-radius: 4px;
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
+  font-size: 13px;
   cursor: pointer;
+  transition: 0.25s;
 }
 
 .student-card button:hover {
-  background-color: #991b1b;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(239,68,68,0.6);
 }
